@@ -4,14 +4,15 @@ const thoughtController = {
 
     createThought({ params, body}, res) {
         console.log(body);
-        User.create(body)
+        Thought.create(body)
             .then(({ _id }) => {
-                return Thought.findOneAndUpdate(
+                return User.findOneAndUpdate(
                     { _id: params.userId},
                     { $push: { thoughts: _id } },
                     { new: true }
                 );
             })
+            .select('-__v')
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
                   res.status(404).json({ message: 'No Thought found with this id!' });
@@ -71,4 +72,4 @@ const thoughtController = {
     }
 };
 
-module.exports = userController;
+module.exports = thoughtController;
