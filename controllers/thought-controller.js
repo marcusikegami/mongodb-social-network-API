@@ -12,7 +12,7 @@ const thoughtController = {
                     { new: true }
                 );
             })
-            .select('-__v')
+            
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
                   res.status(404).json({ message: 'No Thought found with this id!' });
