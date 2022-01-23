@@ -8,6 +8,11 @@ const PORT = process.env.PORT || 3001
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mongodb-social-network-API', {
+  
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 mongoose.set('debug', true);
 

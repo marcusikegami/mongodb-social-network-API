@@ -30,9 +30,10 @@ const UserSchema = new Schema (
         },
         
     },
-    // {
-    //     id: false
-    // }
+    {
+        toJSON: {}
+        // id: false
+    }
 )
 
 const User = model('User', UserSchema);
