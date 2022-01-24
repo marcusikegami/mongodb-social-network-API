@@ -27,7 +27,8 @@ const ReactionSchema = new Schema (
     {
         toJSON: {
             getters: true
-        }
+        },
+        id: false
     }
 );
 
@@ -48,6 +49,10 @@ const ThoughtSchema = new Schema(
         username: {
             type: String,
             required: true
+        },
+        userId: {
+            type: Types.ObjectId,
+            ref: 'User',
         },
 
         reactions: [ReactionSchema]

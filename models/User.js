@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Thought = require('./Thought');
 // This email Regular Expression was adapted from this solution from Stack Overflow.
 // https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax
 var validateEmail = function(email) {
@@ -21,18 +22,20 @@ const UserSchema = new Schema (
             // validate: [validateEmail, 'Please fill a valid email address'],
             // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
         },
-        thoughts: {
+        thoughts: [
+            {
             type: Schema.Types.ObjectId,
             ref: 'Thought'
-        },
+            }
+        ],
         friends: {
             type: Schema.Types.ObjectId
         },
         
     },
     {
-        toJSON: {}
-        // id: false
+        toJSON: {},
+        id: false
     }
 )
 
