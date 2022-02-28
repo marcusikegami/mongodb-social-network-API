@@ -14,11 +14,11 @@ This project encompasses a rudimentary NoSQL database that utilizes the browsers
 
 ## Installation
 
-Clone the repository to the working directory. In your CLI, navigate to the repo and run the "npm install" command. If installation of packages is successful, and you have an instance of MongoDB running on your computer, run the command "npm start". If the install was sucessful this should boot up the server and connect the application to your Mongo Database using npm Mongoose. You are now able to use fetch API to modify the database.
-
 Refer to this video Installation tutorial and Demo of the API Routes below:
 
 [MongoDB Social Network API Installation and Fetch API Routes Demonstration](https://www.youtube.com/watch?v=X4gDWpk4yQ4&ab_channel=mikegami.github)
+
+Clone the repository to the working directory. In your CLI, navigate to the repo and run the "npm install" command. If installation of packages is successful, and you have an instance of MongoDB running on your computer, run the command "npm start". If the install was sucessful this should boot up the server and connect the application to your Mongo Database using npm Mongoose. You are now able to use fetch API to modify the database.
 
 ## Usage
 
